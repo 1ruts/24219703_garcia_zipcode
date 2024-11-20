@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>USPS Zip Code LookUp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+      crossorigin="anonymous">
+
+</head>
+<body>
+    <form id="zipform">
+        <div class="row">
+            <div class="col col-md-5">
+                <div class="form-group">
+                    <label for="zip5">Zipcode (5 digits)</label>
+                    <input type="text" class="form-control" id="zip5" placeholder="Enter a zipcode" maxlength="5">
+                    <div id="invalid" class="invalid-feedback"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-5">
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="city" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-5">
+                <div class="form-group">
+                    <label for="zip5">State</label>
+                    <input type="text" class="form-control" id="state" placeholder="state" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-5">
+                <button type="button" class="form-control btn btn-primary" onclick="loadXMLDoc()">Get City/State</button>
+            </div>
+        </div>
+    </form>
+</body>
